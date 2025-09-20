@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter';
 }
 
 .main-container {
@@ -56,12 +57,17 @@ svg {
 
 /* nav */
 .navbar-nav {
+    display: flex;
     gap: 52px;
+    list-style: none;
 }
 
 .nav-link {
     opacity: 0.3;
     font-size: 16px;
+    text-decoration: none;
+    color: #000;
+
 }
 
 .nav-link.active,
@@ -173,6 +179,7 @@ svg {
     border-radius: 6px;
     padding: 16px 56px;
     margin: 0;
+    white-space: nowrap;
 }
 
 .banner .content .button-shop-now:hover {
@@ -266,9 +273,8 @@ svg {
 
 /* ------------------------------Smaller Banner ----------------------------------- */
 .smaller-banners {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .left-banner {
@@ -276,16 +282,17 @@ svg {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 720px;
     align-items: center;
 }
 
 .smaller-banner-content {
     padding-right: 48px;
     flex: 1;
+
 }
 
-.smaller-banner-content p {
+.smaller-banner-content p,
+.right-smaller-banner-content p {
     font-size: 14px;
     font-weight: 500;
     color: #909090;
@@ -296,19 +303,20 @@ svg {
 /* wide-banner */
 .wide-banner {
     display: flex;
-    align-items: center;
     height: 328px;
 }
 
 .wide-banner .smaller-banner-content {
+    order: 2;
+    padding-left: 0;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
     flex-direction: column;
-    text-align: left;
+    gap: 16px;
 }
 
 
-.smaller-banner-content div {
+.smaller-banner-content .wide-smaller-banner-content {
     font-size: 49px;
     font-weight: 500;
     line-height: 40px;
@@ -333,8 +341,7 @@ svg {
 }
 
 .square-banner-left .smaller-banner-content {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding: 48px;
 }
 
 .square-banner-left .smaller-banner-content-1 {
@@ -344,7 +351,7 @@ svg {
     margin: 0;
 }
 
-.square-banner-left .smaller-banner-content-1 span {
+.square-banner-left .smaller-banner-content-1 h3 {
     font-size: 29px;
     font-weight: 500;
 }
@@ -352,20 +359,27 @@ svg {
 .square-banner-right {
     display: flex;
     background-color: #353535;
-    width: 50%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
     gap: 16px;
 }
 
+.square-banner-right .smaller-banner-content {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
 .square-banner-right .smaller-banner-content-2 {
     font-size: 29px;
     font-weight: 300;
+    line-height: 40px;
+    margin: 0;
 }
 
-.square-banner-right .smaller-banner-content-2 span {
+.square-banner-right .smaller-banner-content-2 h3 {
     font-size: 29px;
     font-weight: 500;
 }
@@ -376,28 +390,42 @@ svg {
     display: flex;
     background-color: #EDEDED;
     height: 600px;
-    max-width: 50%;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
-.smaller-banner-content {
+.right-smaller-banner-content {
     padding-left: 56px;
+    padding-top: 164px;
+    padding-bottom: 164px;
+    padding-right: 12px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin: 0;
 }
 
-.smaller-banner-content div {
+.right-smaller-banner-content div {
     font-size: 64px;
     font-weight: 100;
     line-height: 56px;
 }
 
-.smaller-banner-content span {
+.right-smaller-banner-content h3 {
     font-size: 64px;
     font-weight: 500;
     line-height: 56px;
 }
 
-.smaller-banner-content .button-shop-now {
+.right-smaller-banner-content p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 360px;
+}
+
+.right-smaller-banner-content .button-shop-now {
     width: 191px;
     height: 56px;
     border: solid 1px;
@@ -406,9 +434,513 @@ svg {
     text-decoration: none;
     border-radius: 6px;
     padding: 16px 56px;
+    white-space: nowrap;
 }
 
-.smaller-banner-content .button-shop-now:hover {
+.right-smaller-banner-content .button-shop-now:hover {
     background-color: #211C24;
     color: #FFFFFF;
+}
+
+/* ------------------------------ Category ----------------------------------- */
+.category {
+    padding: 80px 160px;
+    background-color: #FAFAFA;
+}
+
+.browse-by-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.browse-by-category h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 1%;
+}
+
+.browse-by-category .next-prev {
+    display: flex;
+    gap: 16px;
+}
+
+.browse-by-category .next-prev button {
+    border: none;
+    background: none;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.category-card {
+    background-color: #EDEDED;
+    text-align: center;
+    padding-top: 24px;
+    border-radius: 15px;
+    height: 128px;
+    width: 160px;
+    white-space: nowrap;
+}
+
+/* ------------------------------ Products ----------------------------------- */
+
+.products {
+    padding: 56px 160px;
+}
+
+/* tags */
+
+.products .tags {
+    margin-bottom: 32px;
+
+}
+
+.products .tags button {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #8B8B8B;
+    border: none;
+    background: none;
+
+}
+
+.products .tags .new-arrival,
+.products .tags button:hover {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.products .tags .bestseller {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+/* card */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 16px;
+    column-gap: 16px;
+}
+
+.product-card {
+    width: 268px;
+    height: 432px;
+    padding: 24px 16px;
+    background-color: #F6F6F6;
+    border-radius: 9px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product-card .btn-like {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+}
+
+.product-card-img {
+    width: 160px;
+    height: 160px;
+}
+
+.product-card .card-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.product-card span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 3%;
+    padding-bottom: 24px;
+}
+
+.product-card .buy-now {
+    background: #000;
+    border-radius: 8px;
+    padding: 12px 64px;
+    border: 1px solid;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+
+.product-card .buy-now:hover {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px 64px;
+    border: 1px solid;
+    color: #000000;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+
+/* ------------------------------ Banners ----------------------------------- */
+.banners {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.big-banner-img {
+    width: 360px;
+}
+
+.btn-shop-now {
+    width: 191px;
+    height: 56px;
+    border: solid 1px;
+    font-size: 16px;
+    color: #211C24;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 16px 56px;
+    background: none;
+    white-space: nowrap;
+}
+
+.btn-shop-now:hover {
+    background-color: #211C24;
+    color: #FFFFFF;
+}
+
+.big-banner-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 56px;
+    gap: 16px;
+}
+
+.big-banner-content div {
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 48px;
+}
+
+.big-banner-content p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #909090;
+}
+
+.banner-img-1 {
+    width: 100%;
+    height: 327px;
+    margin-top: 22px;
+    margin-bottom: 27px;
+}
+
+.banner-img-2 {
+    width: 100%;
+    height: 366px;
+    margin-bottom: 10px;
+}
+
+.banner-img-3 {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 16px;
+}
+
+.banner-img-4 {
+    width: 100%;
+    height: 376px;
+}
+
+
+.big-banner-2 {
+    background-color: #F9F9F9;
+}
+
+.big-banner-3 {
+    background-color: #EAEAEA;
+}
+
+.big-banner-4 {
+    background-color: #2C2C2C;
+}
+
+.big-banner-content-4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 56px;
+    gap: 16px;
+}
+
+.big-banner-content-4 .btn-shop-now {
+    width: 191px;
+    height: 56px;
+    border: solid 1px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 16px 56px;
+    background: none;
+    white-space: nowrap;
+}
+
+.big-banner-content-4 .btn-shop-now:hover {
+    background-color: #FFFFFF;
+    color: #211C24;
+}
+
+.big-banner-content-4 div {
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.big-banner-content-4 p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #909090;
+}
+
+/* ------------------------------ Discourt-Products ----------------------------------- */
+
+.discount-products {
+    padding: 80px 160px;
+}
+
+.title-discourt {
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.discount-products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+}
+
+/* card */
+.discount-product-card {
+    width: 268px;
+    height: 432px;
+    padding: 24px 16px;
+    background-color: #F6F6F6;
+    border-radius: 9px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.discount-product-card .btn-like {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+}
+
+.discount-product-card-img {
+    width: 160px;
+    height: 160px;
+}
+
+.discount-product-card .card-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.discount-product-card span {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 3%;
+    padding-bottom: 24px;
+}
+
+.discount-product-card .buy-now {
+    background: #000;
+    border-radius: 8px;
+    padding: 12px 64px;
+    border: 1px solid;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.discount-product-card .buy-now:hover {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px 64px;
+    border: 1px solid;
+    color: #000;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+
+/* ------------------------------ Banner-2 ----------------------------------- */
+
+.banner-2 {
+    background-image: url(/Bai1-ConvertDesignToHTML/assets/image/Banner-2/Banner-2.png);
+    height: 448px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-2-content {
+    padding: 0;
+    margin-top: 159px;
+}
+
+.banner-2-content div {
+    font-size: 72px;
+    font-weight: 100;
+    line-height: 72px;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.banner-2-content div span {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 72px;
+}
+
+.banner-2-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #787878;
+    white-space: nowrap;
+}
+
+.banner-2-content .btn-shop-now {
+    width: 191px;
+    height: 56px;
+    border: solid 1px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 16px 56px;
+    background: none;
+    white-space: nowrap;
+    margin-top: 40px;
+}
+
+.banner-2-content .btn-shop-now:hover {
+    background-color: #FFFFFF;
+    color: #211C24;
+}
+
+
+/* ------------------------------ Footer ----------------------------------- */
+
+footer {
+    padding: 104px 160px;
+    background-color: #000000;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-text {
+    width: 384px;
+}
+
+.logo-text p {
+    color: #CFCFCF;
+    line-height: 170.5%;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 623px;
+}
+
+.footer-nav h3 {
+    color: #FFFFFF;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-nav span {
+    color: #CFCFCF;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.assistance {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+/* social-icon */
+.social {
+    width: 173px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social svg {
+    width: 16px;
+    height: 16px;
+}
+
+.social a {
+    text-decoration: none;
 }
