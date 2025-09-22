@@ -81,7 +81,7 @@
 .navbar-mobile {
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -300px;
     width: 250px;
     height: 100%;
     background: #fff;
@@ -127,6 +127,7 @@
     padding: 112px 160px;
     display: flex;
     justify-content: space-between;
+    gap: 48px;
 }
 
 .content-left {
@@ -135,6 +136,7 @@
     flex-direction: column;
     gap: 40px;
     width: 536px;
+    height: 556px;
 }
 
 .content-left h1 {
@@ -259,10 +261,6 @@
     margin: 0;
 }
 
-/* input[type=number] {
-    -moz-appearance: textfield;
-} */
-
 .product-card-1 .product-price {
     width: 64px;
 }
@@ -282,7 +280,6 @@
     letter-spacing: 0.035em;
 }
 
-
 /*---------- Content-right -----------*/
 .content-right {
     width: 536px;
@@ -291,6 +288,7 @@
     padding: 56px 64px;
     display: flex;
     flex-direction: column;
+    gap: 40px;
 }
 
 .order-summary h2 {
@@ -302,6 +300,7 @@
 .order-info {
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
 
 .order-content {
@@ -312,7 +311,7 @@
 .code-card {
     display: flex;
     flex-direction: column;
-    position: relative;
+    gap: 24px;
 }
 
 .code-card span {
@@ -320,6 +319,10 @@
     line-height: 16px;
     font-weight: 500;
     color: #545454;
+}
+
+.input-card {
+    position: relative;
 }
 
 .input-code input,
@@ -333,19 +336,81 @@
     color: #979797;
     border-radius: 7px;
     border: 1px solid #9F9F9F;
+    margin-top: 8px;
 }
 
-.btn-apply {
+.input-card input {
+    padding-right: 92.45px;
+}
+
+.input-card .btn-apply {
     position: absolute;
-    bottom: 16px;
-    left: 106x;
-    padding: 8px;
+    top: 24px;
+    right: 14px;
     border-radius: 6px;
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
     width: 76.45px;
     height: 32px;
+    background: none;
+    border: 1px solid;
+}
+
+.order-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tax-shipping {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subtotal,
+.tax,
+.shipping-handling,
+.total {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.subtotal,
+.total {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+
+.tax,
+.shipping-handling {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #545454;
+}
+
+.order-prices span {
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.btn-checkout {
+    margin-top: 24px;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 408px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 /* ------------------------------ Footer ----------------------------------- */

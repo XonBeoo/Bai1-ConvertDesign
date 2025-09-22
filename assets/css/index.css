@@ -85,7 +85,7 @@ svg {
 .navbar-mobile {
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -300px;
     width: 250px;
     height: 100%;
     background: #fff;
@@ -155,12 +155,16 @@ svg {
 }
 
 /* ------------------------------ Banner ----------------------------------- */
-.banner {
+.slide-1,
+.slide-2,
+.slide-3 {
     background: #211C24;
     padding: 0 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 632px;
+    transition: transform 0.5 ease;
 }
 
 /* content */
@@ -223,6 +227,14 @@ svg {
 /* image */
 .banner-img {
     display: block;
+}
+
+.slide-2 img {
+    height: 300px;
+}
+
+.slide-3 img {
+    height: 400px;
 }
 
 /* Responsive */
@@ -396,7 +408,7 @@ svg {
 .square-banner-right {
     display: flex;
     background-color: #353535;
-    max-width: 100%;
+    max-width: 50%;
     max-height: 100%;
     justify-content: center;
     align-items: center;
@@ -422,7 +434,6 @@ svg {
 }
 
 /* right-banner */
-
 .right-banner {
     display: flex;
     background-color: #EDEDED;
@@ -503,7 +514,6 @@ svg {
         line-height: 24px;
         margin: 0;
     }
-
 
 
     /* wide-banner */
@@ -693,6 +703,8 @@ svg {
     justify-content: space-between;
     align-items: center;
     padding-top: 32px;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
 
 .category-card {
@@ -703,6 +715,11 @@ svg {
     height: 128px;
     width: 160px;
     white-space: nowrap;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.category-card:hover {
+    background-color: #CFCFCF;
 }
 
 /* ------------------------------ Products ----------------------------------- */
@@ -762,6 +779,7 @@ svg {
     text-align: center;
 }
 
+
 .product-card .btn-like {
     border: none;
     background: none;
@@ -772,9 +790,19 @@ svg {
     height: 32px;
 }
 
+.product-card .btn-like.active path {
+    fill: #FF0000;
+    stroke: #FF0000;
+}
+
 .product-card-img {
     width: 160px;
     height: 160px;
+    transition: transform 0.6 ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.2);
 }
 
 .product-card .card-content {
@@ -990,9 +1018,20 @@ svg {
     height: 32px;
 }
 
+.discount-product-card .btn-like.active path {
+    fill: #FF0000;
+    stroke: #FF0000;
+}
+
+
 .discount-product-card-img {
     width: 160px;
     height: 160px;
+    transition: transform 0.6 ease;
+}
+
+.discount-product-card:hover img {
+    transform: scale(1.2);
 }
 
 .discount-product-card .card-content {
@@ -1041,6 +1080,7 @@ svg {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .banner-2-content {
