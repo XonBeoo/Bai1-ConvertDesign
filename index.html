@@ -72,8 +72,9 @@
                         </svg>
                     </a>
                 </div>
+                <input type="checkbox" id="menu-toggle" hidden>
                 <div class="mobile-menu">
-                    <button>
+                    <label for="menu-toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 13.75H7.5V11.25H32.5V13.75Z"
                                 fill="#080341" />
@@ -82,8 +83,21 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 28.75H7.5V26.25H32.5V28.75Z"
                                 fill="#080341" />
                         </svg>
-                    </button>
+                    </label>
                 </div>
+                <ul class="navbar-mobile">
+                    <li class="close-btn">
+                        <label for="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <path d="M18 6L6 18" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></label>
+                    </li>
+                    <li class="nav-item"><a href="#Home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#About" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#Contact" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="#Blog" class="nav-link">Blog</a></li>
+                </ul>
             </div>
         </header>
         <section class="banner">
@@ -102,10 +116,12 @@
             <div class="left-banner">
                 <div class="wide-banner">
                     <div class="wide-smaller-banner-img">
-                        <img src="./assets/image/Smaller_Banner/play-station.png" alt="">
+                        <img src="./assets/image/Smaller_Banner/play-station.png" class="smaller-img" alt="">
+                        <img src="./assets/image/Mobile_Smaller_Banner/play-station.png" class="smaller-mobile-img"
+                            alt="">
                     </div>
                     <div class="smaller-banner-content">
-                        <div class="wide-smaller-banner-content">Playstation 5</div>
+                        <div class="wide-smaller-banner-content">Playstation <span>5</span></div>
                         <p>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation
                             experience.</p>
                     </div>
@@ -113,7 +129,9 @@
                 <div class="square-banner">
                     <div class="square-banner-left">
                         <div class="smaller-banner-img">
-                            <img src="./assets/image/Smaller_Banner/apple-airpods.png" alt="">
+                            <img src="./assets/image/Smaller_Banner/apple-airpods.png" class="smaller-img" alt="">
+                            <img src="./assets/image/Mobile_Smaller_Banner/airpods.png" class="smaller-mobile-img"
+                                alt="">
                         </div>
                         <div class="smaller-banner-content">
                             <div class="smaller-banner-content-1">
@@ -126,7 +144,9 @@
                     </div>
                     <div class="square-banner-right">
                         <div class="smaller-banner-img">
-                            <img src="./assets/image/Smaller_Banner/apple-vision.png" alt="">
+                            <img src="./assets/image/Smaller_Banner/apple-vision.png" class="smaller-img" alt="">
+                            <img src="./assets/image/Mobile_Smaller_Banner/apple-vision.png" class="smaller-mobile-img"
+                                alt="">
                         </div>
                         <div class="smaller-banner-content">
                             <div class="smaller-banner-content-2">
@@ -147,7 +167,7 @@
                     <a href="#buynow" class="button-shop-now">Shop Now</a>
                 </div>
                 <div class="right-smaller-banner-img">
-                    <img src="./assets/image/Smaller_Banner/macbook-pro.png" alt="">
+                    <img src="./assets/image/Smaller_Banner/macbook-pro.png" class="smaller-img" alt="">
                 </div>
             </div>
         </section>
@@ -613,6 +633,7 @@
                 </a>
             </div>
         </footer>
+    </div>
 </body>
 
 </html>

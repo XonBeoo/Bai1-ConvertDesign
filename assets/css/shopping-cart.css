@@ -1,0 +1,421 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ------------------------------ Header ----------------------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    padding: 0 160px;
+    border-bottom: 2px solid #909090;
+}
+
+/* logo */
+.logo svg {
+    width: 65.4px;
+    height: 22.84px;
+}
+
+/* search-field */
+.search-field {
+    width: 372px;
+    height: 56px;
+    position: relative;
+}
+
+.search-input {
+    background-color: #F5F5F5;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 48px;
+    border-radius: 8px;
+}
+
+.search-field svg {
+    position: absolute;
+    margin: 16px;
+    padding: 4px;
+}
+
+/* nav */
+.navbar-nav {
+    display: flex;
+    gap: 52px;
+    list-style: none;
+}
+
+.nav-item {
+    line-height: auto;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-link {
+    opacity: 0.3;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+
+}
+
+.nav-link.active,
+.nav-link:hover {
+    opacity: 1;
+}
+
+/* nav-reponsive */
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 2rem 1rem;
+    z-index: 1000;
+}
+
+/* Khi checkbox được tick */
+#menu-toggle:checked~.navbar-mobile {
+    right: 0;
+}
+
+/* icon-header */
+.icon-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icon-header svg {
+    height: 32px;
+    width: 32px;
+}
+
+.icon-header a {
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu button {
+    border: none;
+    background: none;
+}
+
+
+/* ------------------------------ Body ----------------------------------- */
+.shopping-cart-content {
+    padding: 112px 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 536px;
+}
+
+.content-left h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.product-card-1 {
+    display: flex;
+    width: 536px;
+    height: 138px;
+    border-bottom: 1px solid #A3A3A3;
+}
+
+.product-card-2 {
+    display: flex;
+    width: 536px;
+    height: 138px;
+    border-bottom: 1px solid #A3A3A3;
+}
+
+.product-card-3 {
+    display: flex;
+    width: 536px;
+    height: 138px;
+
+}
+
+.product-img {
+    width: 90px;
+    height: 90px;
+    margin-top: 16px;
+    margin-right: 15px;
+}
+
+.product-card-3 .product-img {
+    margin-top: 23px;
+}
+
+.product-content {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.product-card-1 .product-content {
+    margin-top: 21px;
+}
+
+.product-card-2 .product-content {
+    margin-top: 33px;
+}
+
+.product-card-3 .product-content {
+    margin-top: 16px;
+}
+
+.product-card-1 .product-info {
+    width: 191px;
+    height: 80px;
+}
+
+.product-card-2 .product-info {
+    width: 196px;
+    height: 80px;
+}
+
+
+.product-card-3 .product-info {
+    width: 196px;
+    height: 80px;
+}
+
+
+.product-content .product-name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.product-info p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.product-content button {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+}
+
+.product-amount {
+    width: 104px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-amount-price {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.input-amount {
+    width: 40px;
+    height: 32px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+.input-amount::-webkit-outer-spin-button,
+.input-amount::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* input[type=number] {
+    -moz-appearance: textfield;
+} */
+
+.product-card-1 .product-price {
+    width: 64px;
+}
+
+.product-card-2 .product-price {
+    width: 59px;
+}
+
+.product-card-3 .product-price {
+    width: 59px;
+}
+
+.product-price span {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 0.035em;
+}
+
+
+/*---------- Content-right -----------*/
+.content-right {
+    width: 536px;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    padding: 56px 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.code-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.code-card span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #545454;
+}
+
+.input-code input,
+.input-card input {
+    padding: 16px;
+    width: 408px;
+    height: 64px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #979797;
+    border-radius: 7px;
+    border: 1px solid #9F9F9F;
+}
+
+.btn-apply {
+    position: absolute;
+    bottom: 16px;
+    left: 106x;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    width: 76.45px;
+    height: 32px;
+}
+
+/* ------------------------------ Footer ----------------------------------- */
+
+footer {
+    padding: 104px 160px;
+    background-color: #000000;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-text {
+    width: 384px;
+}
+
+.logo-text p {
+    color: #CFCFCF;
+    line-height: 170.5%;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 623px;
+}
+
+.footer-nav h3 {
+    color: #FFFFFF;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-nav span {
+    color: #CFCFCF;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.assistance {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+/* social-icon */
+.social {
+    width: 173px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social svg {
+    width: 16px;
+    height: 16px;
+}
+
+.social a {
+    text-decoration: none;
+}
