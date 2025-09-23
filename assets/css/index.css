@@ -150,7 +150,7 @@ svg {
         list-style: none;
         flex-direction: column;
         gap: 10px;
-        transition: 0.4 ease;
+        transition: 0.4s ease;
     }
 }
 
@@ -703,7 +703,7 @@ svg {
     justify-content: space-between;
     align-items: center;
     padding-top: 32px;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
     overflow: hidden;
 }
 
@@ -795,7 +795,7 @@ svg {
     stroke: #FF0000;
 }
 
-.product-card-img {
+.product-card img {
     width: 160px;
     height: 160px;
     transition: transform 0.6s ease;
@@ -1024,7 +1024,7 @@ svg {
 }
 
 
-.discount-product-card-img {
+.discount-product-card img {
     width: 160px;
     height: 160px;
     transition: transform 0.6s ease;

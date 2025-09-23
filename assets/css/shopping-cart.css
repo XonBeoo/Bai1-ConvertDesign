@@ -413,6 +413,11 @@
     line-height: 24px;
 }
 
+.btn-checkout:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 /* ------------------------------ Footer ----------------------------------- */
 
 footer {
